@@ -1,0 +1,230 @@
+object AboutForm: TAboutForm
+  Left = 457
+  Height = 447
+  Top = 174
+  Width = 381
+  ActiveControl = BtnOK
+  AutoSize = True
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'About this program'
+  ClientHeight = 447
+  ClientWidth = 381
+  Position = poMainFormCenter
+  LCLVersion = '1.5'
+  Visible = False
+  object GroupAbout: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtnOK
+    Left = 8
+    Height = 394
+    Top = 2
+    Width = 365
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 8
+    BorderSpacing.Bottom = 8
+    Caption = 'This program is'
+    ClientHeight = 376
+    ClientWidth = 361
+    TabOrder = 0
+    object ExplExpress: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = GroupAbout
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 14
+      Top = 0
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = 'a cross-platform GUI wrapper for'
+      ParentColor = False
+    end
+    object LinkUPX: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = ExplExpress
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 8
+      Height = 14
+      Top = 14
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = 'UPX (Ultimate Packer for eXecutables)'
+      ParentColor = False
+      OnClick = LinkUPXClick
+      OnMouseEnter = WhenMouseEnter
+      OnMouseLeave = WhenMouseLeave
+    end
+    object ExplGPL1: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = LinkUPX
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 84
+      Top = 28
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = 'Copyright (C) 2011 Mario Ray M.'#13#10#13#10'This program is a free software; you can redistribute it'#13#10'and/or modify it under the terms of the GNU General'#13#10'Public License as published by the Free Software'#13#10'Foundation; either version 2 of the License, or'
+      ParentColor = False
+    end
+    object ExplGPL2: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = ExplGPL1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 84
+      Top = 112
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = '(at your option) any later version.'#13#10#13#10'Use this software at you own risk, the author is NOT'#13#10'responsible for any damage caused by this program.'#13#10#13#10'Report any bugs and/or suggestion to'
+      ParentColor = False
+    end
+    object LinkEmail: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = ExplGPL2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Cursor = crHandPoint
+      Left = 8
+      Height = 14
+      Top = 196
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = 'leledumbo_cool@yahoo.co.id'
+      ParentColor = False
+      OnClick = LinkEmailClick
+      OnMouseEnter = WhenMouseEnter
+      OnMouseLeave = WhenMouseLeave
+    end
+    object LinkColorProgress: TLabel
+      AnchorSideLeft.Control = Wile64
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Thanks
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = LblComponent
+      Cursor = crHandPoint
+      Left = 170
+      Height = 14
+      Top = 238
+      Width = 89
+      Alignment = taCenter
+      Anchors = [akTop]
+      Caption = 'ColorProgress'
+      ParentColor = False
+      OnClick = LinkColorProgressClick
+      OnMouseEnter = WhenMouseEnter
+      OnMouseLeave = WhenMouseLeave
+    end
+    object Thanks: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = LinkEmail
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 28
+      Top = 210
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = #13#10'Special Thanks'
+      ParentColor = False
+    end
+    object Wile64: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = Thanks
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = LinkColorProgress
+      Left = 0
+      Height = 14
+      Top = 238
+      Width = 170
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Wile64 - for his excellent '
+      ParentColor = False
+    end
+    object LblComponent: TLabel
+      AnchorSideLeft.Control = LinkColorProgress
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Thanks
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Left = 259
+      Height = 14
+      Top = 238
+      Width = 102
+      Anchors = [akTop, akLeft, akRight]
+      Caption = ' component'
+      ParentColor = False
+    end
+    object LinkBrowserDetection: TLabel
+      AnchorSideLeft.Control = GroupAbout
+      AnchorSideTop.Control = LinkColorProgress
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = GroupAbout
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 14
+      Top = 252
+      Width = 345
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Caption = 'Writer of browserdetection unit  (for older versions)'
+      ParentColor = False
+    end
+  end
+  object BtnOK: TButton
+    AnchorSideTop.Control = GroupAbout
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 203
+    Height = 35
+    Top = 404
+    Width = 47
+    Anchors = [akBottom]
+    AutoSize = True
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 8
+    BorderSpacing.InnerBorder = 4
+    Caption = '&OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 1
+  end
+end

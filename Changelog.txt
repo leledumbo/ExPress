@@ -1,0 +1,61 @@
+0.9.9.9
+- Refactor thread classes to its own unit, using callbacks to communicate with
+  the main form
+- Fix differences in Debug/Release Build Mode
+- Faster wait loop (1 instead of 100 ms)
+- Disable only dangerous controls upon running, for better display
+
+0.9.9.1
+- Change method to search for UPX executable, use FileUtil.FindDefaultExecutablePath
+  instead (much less code, and ensure to be totally platform independent :))
+- Remove previously added information regarding the way UPX executable is searched
+- Fix a little typo in about form: Ulimate -> Ultimate
+
+0.9.9
+- Updated code for the deprecated TProcess.CommandLine (backward compatibility
+  with FPC < 2.6.0 or FPC 2.5.1 before April 2011 is maintained)
+- Add more information to the error dialog when UPX executable can't be found
+
+0.9.8
+- Multithreading capability, more reliable progress bar, now based on number of
+  finished files (configurable in advanced dialog)
+- Some minor string corrections
+- Dropped process priority selection, seems giving no noticable advantage while
+  causing quite a problem (unresponsive UI while processing)
+
+0.9.2
+- Added detection whether the file has been UPXed before. If yes, then it will be
+  unchecked in output panel (decompress)
+
+0.9.0
+- Use autosize, childsizing, and anchors to ensure the same look and feel for every
+  supported platforms
+
+0.8.5 (not published)
+- Use $SrcOS() macro instead of $TargetOS() for browserdetection include file (merge
+  win32 and win64 to win, linux and darwin to unix)
+
+0.8.4
+- Auto open of browser is implemented! Thanks to the writer of browserdetection unit
+
+0.8.3
+- LZMA option bug is solved (no one report this, that's why I just knew it)
+- Accepts input from command line (or drag n drop to application's link)
+
+0.8.2
+- Rebuilt with Lazarus 0.9.27 & FPC 2.3.1
+- Window position is saved along with UPX settings
+- Better icon on form
+
+0.8.1
+- Fixed anchor docking (just knew how it works)
+
+0.8.0:
+- Added new buttons: "Select All", "Deselect All", "Invert Selection"
+- Resizeable form (not yet complete)
+- New component usage: ColorProgress
+- Errors and warnings are now written to "Result" column (no annoying message box anymore)
+- Fixed bug: wrong sorting when clicking 3rd (was "Result", now "Size After") column header
+
+0.7.5:
+- Initial release

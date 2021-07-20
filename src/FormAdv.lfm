@@ -1,0 +1,235 @@
+object AdvForm: TAdvForm
+  Left = 531
+  Height = 392
+  Top = 121
+  Width = 197
+  HorzScrollBar.Page = 191
+  VertScrollBar.Page = 356
+  ActiveControl = CGTuning.CheckBox2
+  AutoSize = True
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Advanced Options'
+  ClientHeight = 392
+  ClientWidth = 197
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poMainFormCenter
+  SessionProperties = 'CGAdditional.Items;CGOther.Items;CGTuning.Items;RGOverlay.Items'
+  LCLVersion = '1.5'
+  Visible = False
+  object CGTuning: TCheckGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 102
+    Top = 2
+    Width = 181
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 2
+    BorderSpacing.Right = 8
+    Caption = 'Compression Tuning'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 84
+    ClientWidth = 177
+    Items.Strings = (
+      'Use LZMA compression method'
+      'Force compression'
+      'Brute [slow]'
+      'Ultra brute [VERY slow]'
+    )
+    TabOrder = 0
+    Data = {
+      0400000002020202
+    }
+  end
+  object CGAdditional: TCheckGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = RGOverlay
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 66
+    Top = 188
+    Width = 181
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Right = 8
+    Caption = 'Additional'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 48
+    ClientWidth = 177
+    Items.Strings = (
+      'All Methods'
+      'All Filters'
+    )
+    TabOrder = 1
+    Data = {
+      020000000202
+    }
+  end
+  object BtnOK: TButton
+    AnchorSideLeft.Control = ThreadPanel
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = ThreadPanel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 61
+    Height = 20
+    Top = 364
+    Width = 75
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 8
+    BorderSpacing.InnerBorder = 4
+    Caption = '&OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object CGOther: TCheckGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = CGAdditional
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 66
+    Top = 254
+    Width = 181
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Right = 8
+    Caption = 'Other'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 48
+    ClientWidth = 177
+    Items.Strings = (
+      'Keep backup files'
+      'Save as default'
+    )
+    TabOrder = 3
+    Data = {
+      020000000202
+    }
+  end
+  object RGOverlay: TRadioGroup
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = CGTuning
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 84
+    Top = 104
+    Width = 181
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Left = 8
+    BorderSpacing.Right = 8
+    Caption = 'Overlay'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 66
+    ClientWidth = 177
+    Items.Strings = (
+      'Copy [default]'
+      'Strip [DANGEROUS]'
+      'Skip'
+    )
+    TabOrder = 4
+  end
+  object ThreadPanel: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = CGOther
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 36
+    Top = 320
+    Width = 197
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+    ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
+    ChildSizing.ShrinkHorizontal = crsHomogenousSpaceResize
+    ChildSizing.ShrinkVertical = crsHomogenousSpaceResize
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 36
+    ClientWidth = 197
+    TabOrder = 5
+    object LblThreadCount: TLabel
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 20
+      Top = 8
+      Width = 122
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Number of threads:'
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object SpinEditThreadCount: TSpinEdit
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 138
+      Height = 20
+      Top = 8
+      Width = 50
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      MaxValue = 8
+      MinValue = 1
+      TabOrder = 0
+      Value = 1
+    end
+  end
+end

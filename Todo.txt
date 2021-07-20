@@ -1,0 +1,5 @@
+- Cancellation of running process
+- Help file
+- Internationalization / localization
+
+* weird eh? these things here don't seem to get implemented in next versions :p

@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <Title Value="(Ex)ecutables'' Com(press)or"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MinorVersionNr Value="9"/>
+      <RevisionNr Value="9"/>
+      <BuildNr Value="1"/>
+      <CharSet Value="0000"/>
+      <StringTable FileDescription="a cross-platform GUI wrapper for UPX (Ultimate Packer for eXecutables)" LegalCopyright="Mario Ray Mahardhika" ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="2" Active="Release">
+      <Item1 Name="Debug" Default="True"/>
+      <Item2 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="../bin/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)/ExPress"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="include/$(SrcOS);$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="../lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <CStyleOperator Value="False"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseLineInfoUnit Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <WriteFPCLogo Value="False"/>
+            <ConfigFile>
+              <CustomConfigFile Value="True"/>
+            </ConfigFile>
+            <CustomOptions Value="-dUseCThreads"/>
+            <ExecuteBefore>
+              <CompileReasons Compile="False" Build="False" Run="False"/>
+            </ExecuteBefore>
+            <ExecuteAfter>
+              <CompileReasons Compile="False" Build="False"/>
+            </ExecuteAfter>
+          </Other>
+          <CompileReasons Run="False"/>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="69">
+      <Unit0>
+        <Filename Value="ExPress.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="160"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="FormMain.pp"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="190"/>
+        <CursorPos X="31" Y="212"/>
+        <UsageCount Value="160"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../../../Lazarus/lcl/dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <TopLine Value="201"/>
+        <CursorPos X="3" Y="212"/>
+        <UsageCount Value="3"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../../../Lazarus/lcl/include/filedialog.inc"/>
+        <TopLine Value="54"/>
+        <CursorPos X="27" Y="62"/>
+        <UsageCount Value="3"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../../../Lazarus/lcl/include/commondialog.inc"/>
+        <TopLine Value="77"/>
+        <CursorPos X="3" Y="82"/>
+        <UsageCount Value="3"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="FormAbout.pp"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="63"/>
+        <CursorPos Y="71"/>
+        <UsageCount Value="138"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../../Lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <TopLine Value="42"/>
+        <CursorPos X="3" Y="52"/>
+        <UsageCount Value="3"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../../Lazarus/lcl/graphtype.pp"/>
+        <UnitName Value="GraphType"/>
+        <TopLine Value="1252"/>
+        <CursorPos X="9" Y="1262"/>
+        <UsageCount Value="3"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../../Lazarus/lcl/comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <TopLine Value="1064"/>
+        <CursorPos X="21" Y="1077"/>
+        <UsageCount Value="5"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/rtl/win32/system.pp"/>
+        <UnitName Value="System"/>
+        <TopLine Value="391"/>
+        <CursorPos X="19" Y="311"/>
+        <UsageCount Value="4"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/rtl/inc/systemh.inc"/>
+        <TopLine Value="232"/>
+        <CursorPos X="31" Y="8"/>
+        <UsageCount Value="4"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../../../../Lazarus/lcl/include/listitems.inc"/>
+        <TopLine Value="297"/>
+        <CursorPos X="3" Y="304"/>
+        <UsageCount Value="4"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../../Lazarus/lcl/lazhelphtml.pas"/>
+        <UnitName Value="LazHelpHTML"/>
+        <TopLine Value="68"/>
+        <CursorPos X="26" Y="78"/>
+        <UsageCount Value="5"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../../../Lazarus/lcl/fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <TopLine Value="88"/>
+        <CursorPos X="10" Y="98"/>
+        <UsageCount Value="5"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../../../../Lazarus/lcl/include/fileutil.inc"/>
+        <TopLine Value="1126"/>
+        <CursorPos X="35" Y="1131"/>
+        <UsageCount Value="5"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../../../Lazarus/lcl/interfaces/gtk2/gtk2int.pas"/>
+        <UnitName Value="Gtk2Int"/>
+        <TopLine Value="61"/>
+        <CursorPos X="41" Y="71"/>
+        <UsageCount Value="5"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="FormAdv.pp"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AdvForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="22"/>
+        <CursorPos X="12" Y="76"/>
+        <UsageCount Value="121"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../../../Lazarus/lcl/extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <TopLine Value="799"/>
+        <CursorPos X="3" Y="777"/>
+        <UsageCount Value="5"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../../../Lazarus/lcl/propertystorage.pas"/>
+        <UnitName Value="PropertyStorage"/>
+        <TopLine Value="143"/>
+        <CursorPos X="15" Y="153"/>
+        <UsageCount Value="5"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/packages/fcl-base/src/inc/process.pp"/>
+        <TopLine Value="115"/>
+        <CursorPos X="3" Y="24"/>
+        <UsageCount Value="5"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../../../../Lazarus/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <TopLine Value="1800"/>
+        <CursorPos X="15" Y="1809"/>
+        <UsageCount Value="5"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../../../../Lazarus/lcl/lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <TopLine Value="51"/>
+        <CursorPos X="3" Y="61"/>
+        <UsageCount Value="5"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="FormCompress.pp"/>
+        <ComponentName Value="CompressForm"/>
+        <TopLine Value="16"/>
+        <CursorPos X="11" Y="30"/>
+        <UsageCount Value="27"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../MapEditor/MapEditor.lpr"/>
+        <UsageCount Value="5"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/rtl/objpas/sysutils/osutilsh.inc"/>
+        <TopLine Value="16"/>
+        <CursorPos X="11" Y="25"/>
+        <UsageCount Value="5"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/rtl/win/sysutils.pp"/>
+        <TopLine Value="876"/>
+        <CursorPos X="3" Y="879"/>
+        <UsageCount Value="5"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../../../../Lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <TopLine Value="1036"/>
+        <CursorPos X="15" Y="1048"/>
+        <UsageCount Value="5"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="../../../../Lazarus/lcl/include/application.inc"/>
+        <TopLine Value="1622"/>
+        <CursorPos X="17" Y="1629"/>
+        <UsageCount Value="5"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="FormCompress.lrs"/>
+        <UsageCount Value="5"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="FormCompress.lfm"/>
+        <TopLine Value="24"/>
+        <CursorPos X="17" Y="15"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="../../../../Lazarus/lcl/include/wincontrol.inc"/>
+        <TopLine Value="5274"/>
+        <CursorPos X="3" Y="5279"/>
+        <UsageCount Value="5"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/rtl/objpas/classes/classesh.inc"/>
+        <TopLine Value="1197"/>
+        <CursorPos X="3" Y="1206"/>
+        <UsageCount Value="5"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="../../../../Lazarus/fpc/2.2.0/source/rtl/objpas/classes/classes.inc"/>
+        <TopLine Value="154"/>
+        <CursorPos X="5" Y="156"/>
+        <UsageCount Value="5"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="../../../../Sources/Lazarus-fpc/fpc-2.3.1/rtl/inc/heaph.inc"/>
+        <TopLine Value="80"/>
+        <CursorPos X="10" Y="89"/>
+        <UsageCount Value="5"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="../../../../Sources/Lazarus-fpc/fpc-2.3.1/rtl/inc/heap.inc"/>
+        <TopLine Value="283"/>
+        <CursorPos X="3" Y="285"/>
+        <UsageCount Value="5"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:/lazarus/lcl/comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <TopLine Value="687"/>
+        <CursorPos X="3" Y="698"/>
+        <UsageCount Value="10"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="../../../../Sources/Lazarus-fpc/fpc-2.3.1/rtl/win32/system.pp"/>
+        <UnitName Value="System"/>
+        <TopLine Value="31"/>
+        <CursorPos X="20" Y="37"/>
+        <UsageCount Value="5"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="../../../../Sources/lazarus-fpc/fpc-2.3.1/rtl/objpas/objpas.pp"/>
+        <TopLine Value="62"/>
+        <CursorPos X="15" Y="71"/>
+        <UsageCount Value="5"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:/SWI-Prolog/include/plterm.tmp.h"/>
+        <TopLine Value="203"/>
+        <CursorPos X="25" Y="208"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="C++"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="FormMain.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1323"/>
+        <CursorPos Y="1336"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="../../../../usr/lib/lazarus/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <TopLine Value="102"/>
+        <CursorPos X="9" Y="110"/>
+        <UsageCount Value="5"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="FormMain.lrs"/>
+        <TopLine Value="202"/>
+        <CursorPos X="4" Y="214"/>
+        <UsageCount Value="5"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="../../../../Sources/lazarus-fpc/fpc/rtl/objpas/sysutils/finah.inc"/>
+        <TopLine Value="12"/>
+        <CursorPos X="10" Y="24"/>
+        <UsageCount Value="5"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="../../../../Sources/lazarus-fpc/fpc/rtl/objpas/sysutils/fina.inc"/>
+        <TopLine Value="37"/>
+        <CursorPos X="7" Y="48"/>
+        <UsageCount Value="5"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="../../../../usr/share/lazarus/lcl/fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <TopLine Value="74"/>
+        <CursorPos X="10" Y="86"/>
+        <UsageCount Value="5"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="browserdetection.pp"/>
+        <UnitName Value="BrowserDetection"/>
+        <CursorPos X="40" Y="10"/>
+        <UsageCount Value="33"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="D:/usr/share/lazarus/components/colorprogress/colorprogress.pas"/>
+        <UnitName Value="ColorProgress"/>
+        <TopLine Value="17"/>
+        <CursorPos Y="24"/>
+        <UsageCount Value="10"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="C:/lazarus/components/colorprogress/progresscolor.pas"/>
+        <CursorPos X="18" Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="C:/lazarus/lcl/interfaces/fpgui/corelib/fpg_main.pas"/>
+        <TopLine Value="50"/>
+        <CursorPos X="36" Y="64"/>
+        <UsageCount Value="10"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="UPXThread.pp"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="119"/>
+        <CursorPos X="35" Y="138"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/rtl/objpas/classes/classesh.inc"/>
+        <TopLine Value="1509"/>
+        <CursorPos X="3" Y="1469"/>
+        <UsageCount Value="10"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/rtl/win/tthread.inc"/>
+        <TopLine Value="94"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="10"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="Helpers.pp"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="9"/>
+        <UsageCount Value="38"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/packages/fcl-base/src/syncobjs.pp"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="96"/>
+        <UsageCount Value="10"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/packages/fcl-process/src/process.pp"/>
+        <TopLine Value="103"/>
+        <CursorPos X="15" Y="114"/>
+        <UsageCount Value="10"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/packages/fcl-process/src/win/process.inc"/>
+        <TopLine Value="235"/>
+        <CursorPos X="3" Y="213"/>
+        <UsageCount Value="10"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="AppOptions.pp"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="30"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="C:/lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <TopLine Value="593"/>
+        <CursorPos X="14" Y="604"/>
+        <UsageCount Value="10"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="C:/lazarus/lcl/include/customform.inc"/>
+        <TopLine Value="2678"/>
+        <CursorPos X="3" Y="2632"/>
+        <UsageCount Value="10"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="C:/lazarus/components/colorprogress/colorprogress.pas"/>
+        <UnitName Value="ColorProgress"/>
+        <TopLine Value="83"/>
+        <CursorPos X="14" Y="94"/>
+        <UsageCount Value="10"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/rtl/objpas/sysutils/sysstrh.inc"/>
+        <TopLine Value="96"/>
+        <CursorPos X="14" Y="107"/>
+        <UsageCount Value="10"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="E:/Sources/lazarus-fpc/fpc/rtl/objpas/sysutils/sysstr.inc"/>
+        <TopLine Value="575"/>
+        <CursorPos Y="578"/>
+        <UsageCount Value="10"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="/Sources/lazarus-fpc/fpc/rtl/objpas/classes/classesh.inc"/>
+        <TopLine Value="599"/>
+        <CursorPos X="15" Y="610"/>
+        <UsageCount Value="10"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="/Sources/lazarus-fpc/fpc/rtl/objpas/classes/stringl.inc"/>
+        <TopLine Value="592"/>
+        <CursorPos X="3" Y="597"/>
+        <UsageCount Value="10"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="/usr/lib/lazarus/packager/registration/fcllaz.pas"/>
+        <CursorPos X="15" Y="12"/>
+        <UsageCount Value="10"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="/usr/lib/lazarus/lcl/lclintf.pas"/>
+        <UnitName Value="LCLIntf"/>
+        <TopLine Value="72"/>
+        <CursorPos X="10" Y="82"/>
+        <UsageCount Value="10"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="/usr/lib/lazarus/lcl/include/sysenvapis_unix.inc"/>
+        <TopLine Value="3"/>
+        <CursorPos X="10" Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="../../../../../LinuxShared/lazarus-svn/lcl/comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1089"/>
+        <CursorPos X="3" Y="1101"/>
+        <UsageCount Value="10"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="../../../../../LinuxShared/fpc/source/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1636"/>
+        <CursorPos X="17" Y="1646"/>
+        <UsageCount Value="10"/>
+      </Unit68>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="51" TopLine="41"/>
+      </Position1>
+      <Position2>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="160" TopLine="149"/>
+      </Position2>
+      <Position3>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="98" Column="27" TopLine="81"/>
+      </Position3>
+      <Position4>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="95" Column="16" TopLine="80"/>
+      </Position4>
+      <Position5>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="44" Column="51" TopLine="25"/>
+      </Position5>
+      <Position6>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="66" Column="40" TopLine="63"/>
+      </Position6>
+      <Position7>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="519" Column="46" TopLine="516"/>
+      </Position7>
+      <Position8>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="12" Column="18" TopLine="10"/>
+      </Position8>
+      <Position9>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="44" Column="32" TopLine="31"/>
+      </Position9>
+      <Position10>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="70" Column="7" TopLine="56"/>
+      </Position10>
+      <Position11>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="49" Column="21" TopLine="37"/>
+      </Position11>
+      <Position12>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="144" Column="53" TopLine="133"/>
+      </Position12>
+      <Position13>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="523" Column="31" TopLine="515"/>
+      </Position13>
+      <Position14>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="265" Column="9" TopLine="246"/>
+      </Position14>
+      <Position15>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="68" Column="3" TopLine="62"/>
+      </Position15>
+      <Position16>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="70" Column="37" TopLine="63"/>
+      </Position16>
+      <Position17>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="80" Column="52" TopLine="70"/>
+      </Position17>
+      <Position18>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="265" Column="9" TopLine="246"/>
+      </Position18>
+      <Position19>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="441" Column="18" TopLine="422"/>
+      </Position19>
+      <Position20>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="59" Column="32" TopLine="51"/>
+      </Position20>
+      <Position21>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="114" Column="17" TopLine="106"/>
+      </Position21>
+      <Position22>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="119" Column="19" TopLine="109"/>
+      </Position22>
+      <Position23>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="124" Column="28" TopLine="114"/>
+      </Position23>
+      <Position24>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="125" Column="38" TopLine="116"/>
+      </Position24>
+      <Position25>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="147" Column="52" TopLine="137"/>
+      </Position25>
+      <Position26>
+        <Filename Value="UPXThread.pp"/>
+        <Caret Line="45" Column="5" TopLine="34"/>
+      </Position26>
+      <Position27>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="441" Column="18" TopLine="422"/>
+      </Position27>
+      <Position28>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="528" Column="38" TopLine="516"/>
+      </Position28>
+      <Position29>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="524" TopLine="69"/>
+      </Position29>
+      <Position30>
+        <Filename Value="FormMain.pp"/>
+        <Caret Line="199" Column="42" TopLine="199"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="../bin/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)/ExPress"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="include/$(SrcOS);$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="../lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <Checks>
+        <IOChecks Value="True"/>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <WriteFPCLogo Value="False"/>
+      <ConfigFile>
+        <CustomConfigFile Value="True"/>
+      </ConfigFile>
+      <CustomOptions Value="-dUseCThreads"/>
+      <ExecuteBefore>
+        <CompileReasons Compile="False" Build="False" Run="False"/>
+      </ExecuteBefore>
+      <ExecuteAfter>
+        <CompileReasons Compile="False" Build="False"/>
+      </ExecuteAfter>
+    </Other>
+    <CompileReasons Run="False"/>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
